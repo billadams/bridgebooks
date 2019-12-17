@@ -1,0 +1,77 @@
+/// <reference path = "../base/_mixins.scss" >
+
+
+/********** Grid Layout **********/
+
+.container {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: [nav-start] auto [content-start] auto [callout-start] auto [footer-start] auto [footer-end];
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.color {
+    background: rebeccapurple;
+    color: whitesmoke;
+    text-align: center;
+}
+
+nav {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    /*height: 60px;*/
+}
+
+.header {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    height: 200px;
+}
+
+.callout1 {
+    grid-column: 1 / 2;
+    grid-row: [callout-start] / [footer-start];
+    height: 350px;
+}
+
+.callout2 {
+    grid-column: 2 / 3;
+    grid-row: [callout-start] / [footer-start];
+    height: 350px;
+}
+
+.callout3 {
+    grid-column: 3 / 4;
+    grid-row: [callout-start] / [footer-start];
+    height: 350px;
+}
+
+main {
+    grid-column: 1 / 4;
+    grid-row: [content-start] / [callout-start];
+}
+
+footer {
+    grid-column: 1 / 4;
+    grid-row: [footer-start] / [footer-end];
+    height: 100px;
+}
+
+/********** Grid Layout End **********/
+
+
+/**
+* Fix for sub and sup to prevent them from displaying on top of the expanded menu.
+* https://stackoverflow.com/questions/28583540/css-positioning-absolute-relative-overlay
+**/
+
+sub, sup {
+    z-index: -50;
+}
+
+@include medium-breakpoint {
+    main {
+        grid-column: 1 / 3;
+    }
+}
