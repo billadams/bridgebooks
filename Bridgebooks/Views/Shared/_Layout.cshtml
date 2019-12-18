@@ -11,37 +11,37 @@
 <body>
     <div class="container">
 
-    
-    <nav>
-        <div class="company-logo">
-            <a href="#">Bridge Books</a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href=#>Home</a></li>
-                <li><a href=#>Services</a></li>
-                <li><a href=#>Our Team</a></li>
-                <li><a href=#>Contact</a></li>
-                <li><a href=#>Testimonials</a></li>
-            </ul>
-        </div>
 
-        <button class="hamburger" type="button" role="presentation">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-            <span class="menu-label" id="menu-label">Menu</span>
-        </button>
+        <nav>
+            <div class="company-logo">
+                <a href="#">Bridge Books</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href=#>Home</a></li>
+                    <li><a href=#>Services</a></li>
+                    <li><a href=#>Our Team</a></li>
+                    <li><a href=#>Contact</a></li>
+                    <li><a href=#>Testimonials</a></li>
+                </ul>
+            </div>
 
-    </nav>
+            <button class="hamburger" type="button" role="presentation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+                <span class="menu-label" id="menu-label">Menu</span>
+            </button>
 
-    @*<div class="container">*@
+        </nav>
+
         @RenderBody()
 
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - BridgeBooks</p>
         </footer>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -50,7 +50,7 @@
     <script>
         $('.hamburger').click(function () {
             $(this).toggleClass('is-active');
-  
+
             $('nav ul').toggleClass('show-mobile-nav');
         });
     </script>

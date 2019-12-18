@@ -21,6 +21,8 @@ namespace Bridgebooks
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/main.css"));
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

@@ -28,13 +28,18 @@
 //==============================================================================
 
 @import "components/scaffolding";
-@import "components/grid";
+@import "components/grid"; 
 @import "components/helpers";
 @import "components/buttons";
 @import "components/forms";
 @import "components/tables";
 @import "components/navigation";
 @import "components/layout";
+
+// Font Awesome
+@import "font-awesome/scss/fontawesome.scss";
+@import "font-awesome/scss/solid.scss";
+@import "font-awesome/scss/brands.scss"; 
 
 main {
     
