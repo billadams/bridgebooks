@@ -44,3 +44,54 @@
 main {
     
 }
+
+footer {
+    background: $alternate-color;
+    color: #fff;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 16px;
+
+    .links {
+        display: flex;
+        margin-bottom: 1rem;
+
+        div {
+            flex: 0 1 50%;
+        }
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    a:link, footer a:visited, i {
+        color: #fff;
+    }
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
+
+    .copyright {
+        text-align: center;
+
+        p {
+            font-size: .75rem;
+            margin-bottom: 0;
+        }
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+
+@include medium-breakpoint {
+    footer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

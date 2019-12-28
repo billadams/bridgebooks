@@ -8,7 +8,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 15px;
+    padding: 0 16px;
     display: flex;
     color: white;
     border-bottom: 1px solid white;
@@ -18,7 +18,7 @@ nav div {
     flex-grow: 1;
 }
 
-nav ul, nav li {
+nav ul, nav li, footer ul, footer li {
     margin: 0;
     list-style-type: none;
 }

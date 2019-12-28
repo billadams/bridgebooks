@@ -16,15 +16,7 @@
             <div class="company-logo">
                 <a href="#">Bridge Books</a>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href=#>Home</a></li>
-                    <li><a href=#>Services</a></li>
-                    <li><a href=#>Our Team</a></li>
-                    <li><a href=#>Contact</a></li>
-                    <li><a href=#>Testimonials</a></li>
-                </ul>
-            </div>
+            @Html.Partial("~/Views/Shared/_Menu.cshtml")
 
             <button class="hamburger" type="button" role="presentation">
                 <span class="hamburger-box">
@@ -39,7 +31,22 @@
 
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - BridgeBooks</p>
+            <div class="links">
+                <div>
+                    <h4>Where To?</h4>
+                    @Html.Partial("~/Views/Shared/_Menu.cshtml")
+                </div>
+
+                <div class="social">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/bridgebooksllc/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; @DateTime.Now.Year Bridge Books LLC | Created by Bill Adams</p>
+            </div>
         </footer>
 
     </div>

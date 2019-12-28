@@ -11,16 +11,9 @@
     grid-row-gap: 30px;
 }
 
-.color {
-    background: rebeccapurple;
-    color: whitesmoke;
-    text-align: center;
-}
-
 nav {
     grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    /*height: 60px;*/
+    grid-row: [nav-start] / [content-start];
 }
 
 .header {
@@ -55,7 +48,6 @@ main {
 footer {
     grid-column: 1 / 4;
     grid-row: [footer-start] / [footer-end];
-    height: 100px;
 }
 
 /********** Grid Layout End **********/
