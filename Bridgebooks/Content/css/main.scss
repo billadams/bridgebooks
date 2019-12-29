@@ -39,10 +39,18 @@
 // Font Awesome
 @import "font-awesome/scss/fontawesome.scss";
 @import "font-awesome/scss/solid.scss";
-@import "font-awesome/scss/brands.scss"; 
+@import "font-awesome/scss/brands.scss";
 
-main {
-    
+.callouts {
+    text-align: center;
+
+    h4, i {
+        color: $secondary-color;
+    }
+
+    i {
+        font-size: 4rem;
+    }
 }
 
 footer {
@@ -51,15 +59,7 @@ footer {
     margin-left: -16px;
     margin-right: -16px;
     padding: 16px;
-
-    .links {
-        display: flex;
-        margin-bottom: 1rem;
-
-        div {
-            flex: 0 1 50%;
-        }
-    }
+    text-align: center;
 
     ul {
         padding: 0;
@@ -74,9 +74,11 @@ footer {
         margin-bottom: .5rem;
     }
 
-    .copyright {
-        text-align: center;
+    .social {
+        margin-bottom: 1rem;
+    }
 
+    .copyright {
         p {
             font-size: .75rem;
             margin-bottom: 0;
@@ -87,7 +89,6 @@ footer {
         font-size: 1.5rem;
     }
 }
-
 
 @include medium-breakpoint {
     footer {

@@ -1001,18 +1001,15 @@ nav {
 
 .callout1 {
   grid-column: 1 / 2;
-  grid-row: callout-start/footer-start;
-  height: 350px; }
+  grid-row: callout-start/footer-start; }
 
 .callout2 {
   grid-column: 2 / 3;
-  grid-row: callout-start/footer-start;
-  height: 350px; }
+  grid-row: callout-start/footer-start; }
 
 .callout3 {
   grid-column: 3 / 4;
-  grid-row: callout-start/footer-start;
-  height: 350px; }
+  grid-row: callout-start/footer-start; }
 
 main {
   grid-column: 1 / 4;
@@ -1030,9 +1027,12 @@ footer {
 sub, sup {
   z-index: -50; }
 
+img {
+  width: 100%; }
+
 @media (min-width: 800px) {
   main {
-    grid-column: 1 / 3; } }
+    /*grid-column: 1 / 3;*/ } }
 
 /*!
  * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
@@ -5465,17 +5465,20 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
 
+.callouts {
+  text-align: center; }
+  .callouts h4, .callouts i {
+    color: #BE6E46; }
+  .callouts i {
+    font-size: 4rem; }
+
 footer {
   background: #404040;
   color: #fff;
   margin-left: -16px;
   margin-right: -16px;
-  padding: 16px; }
-  footer .links {
-    display: flex;
-    margin-bottom: 1rem; }
-    footer .links div {
-      flex: 0 1 50%; }
+  padding: 16px;
+  text-align: center; }
   footer ul {
     padding: 0; }
   footer a:link, footer footer a:visited, footer i {
@@ -5483,11 +5486,11 @@ footer {
   footer h4 {
     margin-top: 0;
     margin-bottom: .5rem; }
-  footer .copyright {
-    text-align: center; }
-    footer .copyright p {
-      font-size: .75rem;
-      margin-bottom: 0; }
+  footer .social {
+    margin-bottom: 1rem; }
+  footer .copyright p {
+    font-size: .75rem;
+    margin-bottom: 0; }
   footer i {
     font-size: 1.5rem; }
 
