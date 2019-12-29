@@ -144,6 +144,8 @@
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="Content\images\accounting.jpg" />
+    <Content Include="Content\images\lori.jpg" />
+    <Content Include="Content\images\whitney.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\base\_mixins.scss" />
