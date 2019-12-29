@@ -41,6 +41,30 @@
 @import "font-awesome/scss/solid.scss";
 @import "font-awesome/scss/brands.scss";
 
+main {
+    margin-top: 30px;
+
+    section.home {
+        background: url('../images/accounting.jpg');
+        height: 400px;
+        margin-bottom: 30px;
+
+        h1 {
+            color: #fff;
+        }
+    }
+
+    .callouts {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            flex: 0 1 33%;
+            /*padding: 0 16px;*/
+        }
+    }
+}
+
 .callouts {
     text-align: center;
 
@@ -90,7 +114,31 @@ footer {
     }
 }
 
+@include small-breakpoint {
+    main {
+
+        .callouts {
+            flex-direction: row;
+
+            div { 
+                padding: 0 16px;
+            }
+        }
+    }
+}
+
 @include medium-breakpoint {
+    main {
+        margin-top: 0;
+
+        section.home h1 {
+            float: right;
+            width: 350px;
+            margin-top: 125px;
+            margin-right: 2.55em;
+        }
+    }
+
     footer {
         margin-left: 0;
         margin-right: 0;
