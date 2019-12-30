@@ -1,17 +1,45 @@
-﻿@{
+﻿@model Bridgebooks.Models.ContactViewModel
+
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@using (@Html.BeginForm())
+{
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @Html.ValidationMessageFor(m => m.LastName)
+
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+    @Html.ValidationMessageFor(m => m.Email)
+
+    @Html.LabelFor(m => m.Phone)
+    @Html.TextBoxFor(m => m.Phone)
+
+    @Html.LabelFor(m => m.Comments)
+    @Html.TextAreaFor(m => m.Comments)
+    @Html.ValidationMessageFor(m => m.Comments)
+
+    <input type="submit" value="Submit" />
+}
+
+@*<address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
+
+    <address>
+        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    </address>*@

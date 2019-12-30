@@ -5493,16 +5493,11 @@ main {
 
 .bio {
   border-bottom: 1px solid #cecece;
-  margin-bottom: 32px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "img content";
-  grid-row-gap: 32px; }
+  padding-bottom: 2em;
+  margin-bottom: 32px; }
   .bio .image {
-    grid-area: img;
-    justify-self: center; }
-  .bio .content {
-    grid-area: content; }
+    margin: 0 auto;
+    width: 50%; }
 
 .bio:last-child {
   border-bottom: none;
@@ -5541,6 +5536,13 @@ footer {
     grid-template-areas: "img content";
     grid-column-gap: 30px;
     margin-bottom: 2em; }
+    main .bio h3 {
+      margin-top: 0; }
+    main .bio .image {
+      grid-area: img;
+      width: 100%; }
+    main .bio .content {
+      grid-area: content; }
   main .bio.reverse {
     grid-template-columns: 3fr 1fr;
     grid-template-areas: "content img"; } }

@@ -82,19 +82,12 @@ main {
 
 .bio {
     border-bottom: 1px solid #cecece;
+    padding-bottom: 2em;
     margin-bottom: 32px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img content";
-    grid-row-gap: 32px;
 
     .image {
-        grid-area: img;
-        justify-self: center;
-    }
-
-    .content {
-        grid-area: content;
+        margin: 0 auto;
+        width: 50%;
     }
 }
 
@@ -157,6 +150,19 @@ footer {
             grid-template-areas: "img content";
             grid-column-gap: 30px;
             margin-bottom: 2em;
+
+            h3 {
+                margin-top: 0;
+            }
+
+            .image {
+                grid-area: img;
+                width: 100%;
+            }
+
+            .content {
+                grid-area: content;
+            }
         }
 
         .bio.reverse {
