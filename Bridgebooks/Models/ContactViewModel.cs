@@ -9,11 +9,7 @@ namespace Bridgebooks.Models
     public class ContactViewModel
     {
         [Required]
-        [Display(Name = "First")]
-        public string FirstName { get; set; }
-        [Required]
-        [Display(Name = "Last")]
-        public string LastName { get; set; }
+        public string Name { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }

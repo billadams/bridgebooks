@@ -8,26 +8,32 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 
-@using (@Html.BeginForm())
+<h1>Send Us A Message</h1>
+
+@using (@Html.BeginForm("Contact", "Home", FormMethod.Post))
 {
-    @Html.LabelFor(m => m.FirstName)
-    @Html.TextBoxFor(m => m.FirstName)
-    @Html.ValidationMessageFor(m => m.FirstName)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { placeholder = "Enter Your Name" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
 
-    @Html.LabelFor(m => m.LastName)
-    @Html.TextBoxFor(m => m.LastName)
-    @Html.ValidationMessageFor(m => m.LastName)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { placeholder = "Enter Your Email" })
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
 
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email)
-    @Html.ValidationMessageFor(m => m.Email)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Phone)
+        @Html.TextBoxFor(m => m.Phone, new { placeholder = "Optional" })
+    </div>
 
-    @Html.LabelFor(m => m.Phone)
-    @Html.TextBoxFor(m => m.Phone)
-
-    @Html.LabelFor(m => m.Comments)
-    @Html.TextAreaFor(m => m.Comments)
-    @Html.ValidationMessageFor(m => m.Comments)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Comments)
+        @Html.TextAreaFor(m => m.Comments, new { placeholder = "Enter Your Comment" })
+        @Html.ValidationMessageFor(m => m.Comments)
+    </div>
 
     <input type="submit" value="Submit" />
 }

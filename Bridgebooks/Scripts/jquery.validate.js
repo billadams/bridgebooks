@@ -342,7 +342,8 @@ $.extend( $.validator, {
 			if ( element.type === "radio" ) {
 				this.findByName( element.name ).addClass( errorClass ).removeClass( validClass );
 			} else {
-				$( element ).addClass( errorClass ).removeClass( validClass );
+				$(element).addClass(errorClass).removeClass(validClass);
+				$(element).removeClass('is-success').addClass('has-error');
 			}
 		},
 		unhighlight: function( element, errorClass, validClass ) {
@@ -350,6 +351,7 @@ $.extend( $.validator, {
 				this.findByName( element.name ).removeClass( errorClass ).addClass( validClass );
 			} else {
 				$( element ).removeClass( errorClass ).addClass( validClass );
+				$(element).removeClass('has-error').addClass('is-success');
 			}
 		}
 	},
