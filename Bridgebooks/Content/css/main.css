@@ -5503,6 +5503,11 @@ main {
   border-bottom: none;
   margin-bottom: 0; }
 
+/* Additional Form Validation */
+.field-validation-error {
+  color: #D33C40; }
+
+/* Additional Form Validation */
 footer {
   background: #404040;
   color: #fff;
@@ -5563,4 +5568,6 @@ footer {
         width: 325px; }
   footer {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+  form {
+    width: 50%; } }

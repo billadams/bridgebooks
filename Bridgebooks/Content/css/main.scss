@@ -96,6 +96,12 @@ main {
     margin-bottom: 0;
 }
 
+/* Additional Form Validation */
+.field-validation-error {
+    color: $error;
+}
+/* Additional Form Validation */
+
 footer {
     background: $alternate-color;
     color: #fff;
@@ -195,5 +201,9 @@ footer {
     footer {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    form {
+        width: 50%;
     }
 }
