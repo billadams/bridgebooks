@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
+using System.Text;
 using System.Web;
 
 namespace Bridgebooks.Helpers
@@ -11,14 +12,14 @@ namespace Bridgebooks.Helpers
     {
         public bool SendEmail(ContactViewModel model)
         {
-            var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
             var message = new MailMessage();
 
             message.To.Add(new MailAddress("billadams1977@gmail.com"));
+            //message.To.Add(new MailAddress("bridgebooksllc@gmail.com"));
             message.ReplyToList.Add(new MailAddress(model.Email));
-            message.From = new MailAddress("info@bridgebookslls.com");
+            message.From = new MailAddress("bridgebooksllc@gmail.com");
             message.Subject = "New Message From Bridgebooks LLC";
-            message.Body = string.Format(body, model.Name, model.Email, model.Comments);
+            message.Body = CreateMessageBodyTemplate(model);
             message.IsBodyHtml = true;
 
             using (var smtp = new SmtpClient())
@@ -34,6 +35,18 @@ namespace Bridgebooks.Helpers
             }
 
             return true;
+        }
+
+        private string CreateMessageBodyTemplate(ContactViewModel model)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append($"<p>From:  {model.Name}</p>");
+            sb.Append($"<p>Email: {model.Email}</p>");
+            sb.Append($"<p>Phone: {((!String.IsNullOrEmpty(model.Phone)) ? model.Phone : "Not provided")}</p>");
+            sb.Append($"<p>Message:</p><p>{model.Comments}</p>");
+
+            return sb.ToString();
         }
 
     }

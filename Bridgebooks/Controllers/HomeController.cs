@@ -16,11 +16,13 @@ namespace Bridgebooks.Controllers
             return View();
         }
 
+        [Route("OurTeam")]
         public ActionResult OurTeam()
         {
             return View();
         }
 
+        [Route("Services")]
         public ActionResult Services()
         {
 
@@ -28,12 +30,14 @@ namespace Bridgebooks.Controllers
         }
 
         [HttpGet]
+        [Route("Contact")]
         public ActionResult Contact()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("Contact")]
         public ActionResult Contact(ContactViewModel model)
         {
             if (ModelState.IsValid)
@@ -42,8 +46,22 @@ namespace Bridgebooks.Controllers
 
                 var didSend = emailHelper.SendEmail(model);
 
+                if (!didSend)
+                {
+                    return View("~/Views/Shared/Error.cshtml");
+                }
+            }
+            else
+            {
+                return View(model);
             }
 
+            return View("~/Views/Home/ThankYou.cshtml", model);
+        }
+
+        [Route("ThankYou")]
+        public ActionResult ThankYou(ContactViewModel model)
+        {
             return View(model);
         }
     }
