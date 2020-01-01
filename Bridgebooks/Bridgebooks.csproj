@@ -130,6 +130,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EmailHelper.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -196,6 +197,7 @@
     <Content Include="Content\css\font-awesome\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\css\font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="Content\css\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="MailSettings.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
