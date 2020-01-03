@@ -10,15 +10,19 @@ namespace Bridgebooks.Helpers
 {
     public class EmailHelper
     {
+        private const string TOEMAIL = "bridgebooksllc@gmail.com";
+        private const string FROMEMAIL = "bridgebooksllc@gmail.com";
+        private const string SUBJECT = "New Message From Bridgebooks LLC";
+
         public bool SendEmail(ContactViewModel model)
         {
             var message = new MailMessage();
 
             message.To.Add(new MailAddress("billadams1977@gmail.com"));
-            //message.To.Add(new MailAddress("bridgebooksllc@gmail.com"));
+            message.To.Add(new MailAddress(TOEMAIL));
             message.ReplyToList.Add(new MailAddress(model.Email));
-            message.From = new MailAddress("bridgebooksllc@gmail.com");
-            message.Subject = "New Message From Bridgebooks LLC";
+            message.From = new MailAddress(FROMEMAIL);
+            message.Subject = SUBJECT;
             message.Body = CreateMessageBodyTemplate(model);
             message.IsBodyHtml = true;
 

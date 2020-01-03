@@ -96,6 +96,23 @@ main {
     margin-bottom: 0;
 }
 
+#accordion {
+    border: 1px solid darken($accent-color, 20%); 
+
+    h3 {
+        background: $accent-color;
+        margin: 0 0 5px;
+    }
+
+    h3:hover {
+        cursor: pointer;
+    }
+
+    > h3, > div {
+        padding: 16px;
+    }
+}
+
 /* Additional Form Validation */
 .field-validation-error {
     color: $error;
