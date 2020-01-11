@@ -1,5 +1,13 @@
-﻿@{
+﻿@model Bridgebooks.Models.SEOViewModel
+
+@{
     ViewBag.Title = "Home";
+}
+
+@section AdditionalMeta
+{
+    <meta name="description" content="@Model.Description" />
+    <link rel="canonical" href="@Model.Canonical" />
 }
 
 <section class="content home">
@@ -10,18 +18,18 @@
     <div>
         <i class="fas fa-clock"></i>
         <h4>Efficient</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>*@
     </div>
 
     <div>
         <i class="fas fa-check-circle"></i>
         <h4>Accurate</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>*@
     </div>
 
     <div>
         <i class="fas fa-hands-helping"></i>
         <h4>Helpful</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>*@
     </div>
 </section>

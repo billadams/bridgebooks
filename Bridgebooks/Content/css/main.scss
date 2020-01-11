@@ -99,23 +99,38 @@ main {
 #accordion {
     border: 1px solid darken($accent-color, 20%); 
 
-    h3 {
-        background: $accent-color;
+    h2 {
+        background: lighten($accent-color, 15%);
         margin: 0 0 5px;
     }
 
-    h3:hover {
+    h2:hover {
         cursor: pointer;
     }
 
-    > h3, > div {
+    h2:last-of-type { 
+        margin-bottom: 0;
+    }
+
+    > h2, > div {
         padding: 16px;
+    }
+
+    span {
+        float: right; 
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }
 
 /* Additional Form Validation */
 .field-validation-error {
     color: $error;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin-top: 2em; 
 }
 /* Additional Form Validation */
 
@@ -142,6 +157,11 @@ footer {
 
     .social {
         margin-bottom: 1rem;
+
+        a {
+            display: block;
+            margin-top: .5rem;
+        }
     }
 
     .copyright {
@@ -153,6 +173,12 @@ footer {
 
     i {
         font-size: 1.5rem;
+    }
+
+    .social-anchortext {
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
     }
 }
 

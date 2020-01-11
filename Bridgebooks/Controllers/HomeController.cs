@@ -13,38 +13,64 @@ namespace Bridgebooks.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            SEOViewModel viewModel = new SEOViewModel
+            {
+                Description = "Bridge Books LLC specializes in small business and non-profit accounting.",
+                Canonical = "/"
+            };
+
+            return View(viewModel);
         }
 
         [Route("OurTeam")]
         public ActionResult OurTeam()
         {
-            return View();
+            SEOViewModel viewModel = new SEOViewModel
+            {
+                Description = "Bridge Books LLC has over 38 combined years experience in the financial and accounting industy.",
+                Canonical = "/ourteam"
+            };
+
+            return View(viewModel);
         }
 
         [Route("Services")]
         public ActionResult Services()
         {
+            SEOViewModel viewModel = new SEOViewModel
+            {
+                Description = "Bridge Books LLC provides accounting, bookkeeping, payroll, and financial consulting services.",
+                Canonical = "/services"
+            };
 
-            return View();
+            return View(viewModel);
         }
 
         [HttpGet]
         [Route("Contact")]
         public ActionResult Contact()
         {
-            return View();
+            ContactViewModel viewModel = new ContactViewModel
+            {
+                SEOViewModel = new SEOViewModel
+                {
+                    Description = "Bridge Books LLC would like to hear your questions or concerns.",
+                    Canonical = "/contact"
+                }
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
         [Route("Contact")]
-        public ActionResult Contact(ContactViewModel model)
+        public ActionResult Contact(ContactViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
                 EmailHelper emailHelper = new EmailHelper();
 
-                var didSend = emailHelper.SendEmail(model);
+                var didSend = emailHelper.SendEmail(viewModel);
 
                 if (!didSend)
                 {
@@ -53,16 +79,22 @@ namespace Bridgebooks.Controllers
             }
             else
             {
-                return View(model);
+                viewModel.SEOViewModel = new SEOViewModel
+                {
+                    Description = "Bridge Books LLC would like to hear your questions or concerns.",
+                    Canonical = "/contact"
+                };
+
+                return View(viewModel);
             }
 
-            return View("~/Views/Home/ThankYou.cshtml", model);
+            return View("~/Views/Home/ThankYou.cshtml", viewModel);
         }
 
         [Route("ThankYou")]
-        public ActionResult ThankYou(ContactViewModel model)
+        public ActionResult ThankYou(ContactViewModel viewModel)
         {
-            return View(model);
+            return View(viewModel);
         }
     }
 }

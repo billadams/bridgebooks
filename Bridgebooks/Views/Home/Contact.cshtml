@@ -4,51 +4,64 @@
     ViewBag.Title = "Contact";
 }
 
+@section AdditionalMeta
+{
+    <meta name="description" content="@Model.SEOViewModel.Description" />
+    <link rel="canonical" href="@Model.SEOViewModel.Canonical" />
+}
+
 @section scripts {
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/jqueryui")
 }
 
-<h1>Send Us A Message</h1>
+<section>
 
-@using (@Html.BeginForm("Contact", "Home", FormMethod.Post))
-{
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name, new { placeholder = "Enter Your Name" })
-        @Html.ValidationMessageFor(m => m.Name)
-    </div>
+    <h1>Questions? Send Us A Message</h1>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email)
-        @Html.TextBoxFor(m => m.Email, new { placeholder = "Enter Your Email" })
-        @Html.ValidationMessageFor(m => m.Email)
-    </div>
+    @using (@Html.BeginForm("Contact", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { placeholder = "Enter Your Name" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Phone)
-        @Html.TextBoxFor(m => m.Phone, new { placeholder = "Optional" })
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { placeholder = "Enter Your Email" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Comments)
-        @Html.TextAreaFor(m => m.Comments, new { placeholder = "Enter Your Comment" })
-        @Html.ValidationMessageFor(m => m.Comments)
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Phone)
+            @Html.TextBoxFor(m => m.Phone, new { placeholder = "Optional" })
+        </div>
 
-    <div class="form-group">
-        <input type="submit" value="Submit" />
-    </div>
-}
+        <div class="form-group">
+            @Html.LabelFor(m => m.Comments)
+            @Html.TextAreaFor(m => m.Comments, new { placeholder = "Enter Your Comment" })
+            @Html.ValidationMessageFor(m => m.Comments)
+        </div>
 
-@*<address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+        <div class="form-group">
+            <input type="submit" value="Send" />
+        </div>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>*@
+        @*@Html.HiddenFor(m => m.SEOViewModel.Description)
+        @Html.HiddenFor(m => m.SEOViewModel.Canonical)*@
+    }
+
+    @*<address>
+            One Microsoft Way<br />
+            Redmond, WA 98052-6399<br />
+            <abbr title="Phone">P:</abbr>
+            425.555.0100
+        </address>
+
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>*@
+
+</section>

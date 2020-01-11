@@ -14,16 +14,16 @@ namespace Bridgebooks.Helpers
         private const string FROMEMAIL = "bridgebooksllc@gmail.com";
         private const string SUBJECT = "New Message From Bridgebooks LLC";
 
-        public bool SendEmail(ContactViewModel model)
+        public bool SendEmail(ContactViewModel viewModel)
         {
             var message = new MailMessage();
 
             message.To.Add(new MailAddress("billadams1977@gmail.com"));
             message.To.Add(new MailAddress(TOEMAIL));
-            message.ReplyToList.Add(new MailAddress(model.Email));
+            message.ReplyToList.Add(new MailAddress(viewModel.Email));
             message.From = new MailAddress(FROMEMAIL);
             message.Subject = SUBJECT;
-            message.Body = CreateMessageBodyTemplate(model);
+            message.Body = CreateMessageBodyTemplate(viewModel);
             message.IsBodyHtml = true;
 
             using (var smtp = new SmtpClient())

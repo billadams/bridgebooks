@@ -5505,17 +5505,27 @@ main {
 
 #accordion {
   border: 1px solid #9a9a9a; }
-  #accordion h3 {
-    background: #cdcdcd;
+  #accordion h2 {
+    background: #f3f3f3;
     margin: 0 0 5px; }
-  #accordion h3:hover {
+  #accordion h2:hover {
     cursor: pointer; }
-  #accordion > h3, #accordion > div {
+  #accordion h2:last-of-type {
+    margin-bottom: 0; }
+  #accordion > h2, #accordion > div {
     padding: 16px; }
+  #accordion span {
+    float: right;
+    font-size: 1rem;
+    line-height: 1.5; }
 
 /* Additional Form Validation */
 .field-validation-error {
   color: #D33C40; }
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 2em; }
 
 /* Additional Form Validation */
 footer {
@@ -5534,11 +5544,18 @@ footer {
     margin-bottom: .5rem; }
   footer .social {
     margin-bottom: 1rem; }
+    footer .social a {
+      display: block;
+      margin-top: .5rem; }
   footer .copyright p {
     font-size: .75rem;
     margin-bottom: 0; }
   footer i {
     font-size: 1.5rem; }
+  footer .social-anchortext {
+    color: transparent;
+    font-size: 0;
+    line-height: 0; }
 
 @media (min-width: 600px) {
   main .callouts {

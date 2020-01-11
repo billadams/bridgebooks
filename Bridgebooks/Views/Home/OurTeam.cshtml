@@ -2,6 +2,12 @@
     ViewBag.Title = "Our Team";
 }
 
+@section AdditionalMeta
+{
+    <meta name="description" content="@Model.Description" />
+    <link rel="canonical" href="@Model.Canonical" />
+}
+
 <section>
     <h1>Introducing Bridge Books, LLC</h1>
 

@@ -16,5 +16,6 @@ namespace Bridgebooks.Models
         public string Phone { get; set; }
         [Required]
         public string Comments { get; set; }
+        public SEOViewModel SEOViewModel { get; set; }
     }
 }
