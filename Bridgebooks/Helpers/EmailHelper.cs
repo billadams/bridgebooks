@@ -34,7 +34,7 @@ namespace Bridgebooks.Helpers
                 }
                 catch(Exception e)
                 {
-                    return false;
+                    throw new Exception(e.Message, e.InnerException);
                 }
             }
 

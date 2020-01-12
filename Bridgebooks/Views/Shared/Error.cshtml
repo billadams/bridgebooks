@@ -1,6 +1,29 @@
-﻿@{
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
     ViewBag.Title = "Error";
 }
 
-<h1>Error</h1>
-<p>An error occurred while processing your request.</p>
+<section>
+
+    <h1>Error</h1>
+
+    <p>An error occurred while processing your request.</p>
+
+    @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
+    {
+        <div>
+            <p>
+                <b>Exception:</b> @Model.Exception.Message<br />
+                <b>Controller:</b> @Model.ControllerName<br />
+                <b>Action:</b> @Model.ActionName
+            </p>
+            <div style="overflow:scroll">
+                <pre>
+                    @Model.Exception.StackTrace
+                </pre>
+            </div>
+        </div>
+    }
+
+</section>

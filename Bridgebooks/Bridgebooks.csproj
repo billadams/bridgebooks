@@ -136,6 +136,60 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="android-icon-144x144.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="android-icon-192x192.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="android-icon-36x36.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="android-icon-48x48.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="android-icon-72x72.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="android-icon-96x96.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-114x114.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-120x120.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-144x144.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-152x152.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-180x180.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-57x57.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-60x60.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-72x72.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-76x76.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon-precomposed.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="apple-icon.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="browserconfig.xml">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
     <Content Include="Content\css\font-awesome\webfonts\fa-brands-400.svg" />
     <Content Include="Content\css\font-awesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\css\font-awesome\webfonts\fa-solid-900.svg" />
@@ -158,6 +212,15 @@
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.structure.css" />
     <Content Include="Content\jquery-ui.theme.css" />
+    <Content Include="favicon-16x16.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="favicon-32x32.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="favicon-96x96.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\base\_mixins.scss" />
@@ -208,7 +271,23 @@
     <Content Include="Content\css\font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="Content\css\font-awesome\webfonts\fa-solid-900.woff2" />
     <Content Include="MailSettings.config" />
+    <None Include="Properties\PublishProfiles\bridgebooksllc.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="manifest.json">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="ms-icon-144x144.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="ms-icon-150x150.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="ms-icon-310x310.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
+    <Content Include="ms-icon-70x70.png">
+      <DependentUpon>favicon.ico</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />

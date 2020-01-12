@@ -22,7 +22,7 @@ namespace Bridgebooks
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/css/allstyles").Include(
                       "~/Content/css/main.css"));
 
             //BundleTable.EnableOptimizations = true;
