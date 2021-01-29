@@ -859,7 +859,7 @@ nav .company-logo {
   display: inline-flex;
   order: 1; }
   nav .company-logo span {
-    background: no-repeat url("../images/bb_icon_blue.png");
+    background: no-repeat url("../images/bb_white_transparent.png");
     background-size: contain;
     display: inline-block;
     height: 40px;
@@ -5481,20 +5481,18 @@ readers do not read off random characters that represent icons */
 main {
   margin-top: 30px;
   padding: 0; }
-  main section.home {
+  main .background-image {
     background: url("../images/accounting.jpg");
-    height: 400px;
-    margin-bottom: 30px; }
-    main section.home h1 {
-      color: #fff;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 15px; }
+    height: 400px; }
+  main .home h1 {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2.5rem; }
   main .callouts {
     display: flex;
     flex-direction: column; }
     main .callouts div {
-      flex: 0 1 33%;
-      /*padding: 0 16px;*/ }
+      flex: 0 1 33%; }
 
 .callouts {
   text-align: center; }
@@ -5596,15 +5594,15 @@ footer {
     margin-top: 0;
     padding: 0 16px; }
     main section.home {
-      display: flex;
-      justify-content: flex-end;
-      text-align: center; }
+      /*            display: flex;
+            justify-content: flex-end;
+            text-align: center;*/ }
       main section.home h1 {
-        align-self: center;
-        background: rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        margin-right: 13%;
-        width: 325px; }
+        /*                align-self: center;
+                background: rgba(0, 0, 0, .25);
+                border-radius: 10px;
+                margin-right: 13%;
+                width: 325px;*/ }
   footer {
     margin-left: 0;
     margin-right: 0; }

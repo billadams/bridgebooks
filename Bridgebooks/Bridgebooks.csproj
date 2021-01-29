@@ -203,6 +203,7 @@
     </Content>
     <Content Include="Content\images\accounting.jpg" />
     <Content Include="Content\images\bb_icon_blue.png" />
+    <Content Include="Content\images\bb_white_transparent.png" />
     <Content Include="Content\images\lori.jpg" />
     <Content Include="Content\images\ui-icons_444444_256x240.png" />
     <Content Include="Content\images\ui-icons_555555_256x240.png" />
